@@ -6,6 +6,15 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
     s.min = 0;
     s.max = 0;
     int sum = 0;
+    
+    if (setlength == 0)
+    {
+        s.average = nan;
+        s.min = nan;
+        s.max = nan;
+        return s;
+    }
+    
     for (int i = 0; i < setlength; i++)
     {
         if (numberset[i] < s.min)
