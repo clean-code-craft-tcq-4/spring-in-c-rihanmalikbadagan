@@ -1,6 +1,4 @@
 
-#define TRUE 0
-#define FALSE 1
 struct Stats
 {
     int average;
@@ -12,8 +10,8 @@ struct Stats compute_statistics(const float* numberset, int setlength);
 
 typedef void (*alerter_funcptr)(int);
 void check_and_alert(float maxThreshold, alerter_funcptr alerters[], struct Stats computedStats);
-void emailAlerter(int status);
-void ledAlerter(int status);
+void emailAlerter(void);
+void ledAlerter(void);
 
 extern int emailAlertCallCount;
 extern int ledAlertCallCount;

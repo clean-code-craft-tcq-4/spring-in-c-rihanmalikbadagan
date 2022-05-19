@@ -4,30 +4,20 @@
 
 void check_and_alert(const float maxThreshold, alerter_funcptr alerters[], struct Stats s)
 {
-    int status = FALSE;
     if (s.max > maxThreshold)
     {
-        status = TRUE;
-    } else
-    {
-        status = FALSE;
-    }
-    alerters [0] = emailAlerter(status);
-    alerters [1] = ledAlerter(status);
+        alerters [0];
+        alerters [1];
+    } 
+
 }
 
-void *emailAlerter(int status)
+void emailAlerter(void)
 {
-    if (status == TRUE)
-    {
-        emailAlertCallCount = 1;
-    }
+    emailAlertCallCount = 1;
 }
 
-void *ledAlerter(int status)
+void ledAlerter(void)
 {
-    if (status == TRUE)
-    {
-        ledAlertCallCount = 1;
-    }
+    ledAlertCallCount = 1;
 }
