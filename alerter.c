@@ -16,7 +16,7 @@ void check_and_alert(const float maxThreshold, alerter_funcptr alerters[], struc
     alerters [1] = ledAlerter(status);
 }
 
-void emailAlerter(int status)
+void *emailAlerter(int status)
 {
     if (status == TRUE)
     {
@@ -24,7 +24,7 @@ void emailAlerter(int status)
     }
 }
 
-void ledAlerter(int status)
+void *ledAlerter(int status)
 {
     if (status == TRUE)
     {
