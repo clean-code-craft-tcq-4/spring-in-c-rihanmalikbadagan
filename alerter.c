@@ -12,12 +12,12 @@ void check_and_alert(const float maxThreshold, alerter_funcptr alerters[], struc
 
 }
 
-void emailAlerter(void)
+void emailAlerter()
 {
     emailAlertCallCount = 1;
 }
 
-void ledAlerter(void)
+void ledAlerter()
 {
     ledAlertCallCount = 1;
 }
