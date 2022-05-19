@@ -1,3 +1,6 @@
+
+#define TRUE 0
+#define FALSE 1
 struct Stats
 {
     int average;

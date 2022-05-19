@@ -4,6 +4,7 @@
 
 int emailAlertCallCount = 0;
 int ledAlertCallCount = 0;
+const float NaN = 0.0/0.0;
 struct Stats compute_statistics(const float* numberset, int setlength) {
     struct Stats s;
     s.average = 0;
@@ -13,9 +14,9 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
     
     if (setlength == 0)
     {
-        s.average = nan;
-        s.min = nan;
-        s.max = nan;
+        s.average = NaN;
+        s.min = NaN;
+        s.max = NaN;
         return s;
     }
     
