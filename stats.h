@@ -2,9 +2,9 @@
 extern const float NaN;
 struct Stats
 {
-    int average;
-    int min;
-    int max;
+    float average;
+    float min;
+    float max;
 };
 
 struct Stats compute_statistics(const float* numberset, int setlength);
