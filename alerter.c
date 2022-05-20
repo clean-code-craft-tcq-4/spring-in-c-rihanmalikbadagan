@@ -6,8 +6,8 @@ void check_and_alert(const float maxThreshold, alerter_funcptr alerters[], struc
 {
     if (s.max > maxThreshold)
     {
-        alerters [0];
-        alerters [1];
+        alerters [0]();
+        alerters [1]();
     } 
 
 }

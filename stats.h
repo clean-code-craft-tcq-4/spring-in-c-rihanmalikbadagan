@@ -1,4 +1,5 @@
 
+extern const float NaN;
 struct Stats
 {
     int average;
