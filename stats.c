@@ -8,9 +8,6 @@ const float NaN = 0.0/0.0;
 struct Stats compute_statistics(const float* numberset, int setlength) {
     struct Stats s;
     float sum = 0;
-    s.average = 0;
-    s.min = 0;
-    s.max = 0;
     
     if (setlength == 0)
     {
@@ -19,7 +16,11 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
         s.max = NaN;
         return s;
     }
-    
+
+    s.average = 0;
+    s.min = numberset[0];
+    s.max = numberset[0];
+
     for (int i = 0; i < setlength; i++)
     {
         if (numberset[i] < s.min)
